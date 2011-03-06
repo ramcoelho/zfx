@@ -1,0 +1,23 @@
+Welcome do zfx.
+
+This project extends ZendFramework's zf script by adding database reverse engineering capabilities.
+
+Make sure to configure your environment by listing the parent directories for zf and zfx on system's PATH and ZendFramework's library directory on include_path (php.ini).
+Remember your "zf.sh" script could be named just "zf" on your system. Please adjust the examples below if it is the case.
+
+How you use it:
+
+1. Create a ZF project with the regular zf script:
+	$ zf.sh create project myproject
+
+2. Configure a ZendDb adapter from within the root of your project:
+	$ cd myproject
+	$ zf.sh configure db-adapter "adapter=Pdo_Pgsql&host=localhost&username=user&password=secret&dbname=catalog"
+
+3. Run zfx from within the root of your project:
+	$ zfx
+
+That's all! Have a nice coding!
+
+I have tested this on Ubuntu 10.10 and PostgreSQL. If it works for you on a different setup, please send and e-mail to: ram.coelho AT gmail DOT com.
+Ricardo Coelho

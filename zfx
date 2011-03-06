@@ -1,0 +1,13 @@
+#!/bin/sh
+
+zf=`which zf`
+if [ -z $zf ]; then
+	zf=`which zf.sh`
+fi
+if [ -z $zf ]; then
+	echo "Can't find either zf or zf.sh. Please check the PATH:"
+	echo $PATH
+	exit 1
+else
+	/usr/bin/php5 /usr/share/php/zfx/zfx.php $zf
+fi
